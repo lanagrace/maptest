@@ -4,12 +4,64 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin=""/>
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="css/styles.css">
 	<title>Title</title>
 </head>
 
 <body>
+	<div id="map"></div>
 
+	 <!-- Modal Structure -->
+	 <div id="addLocModal" class="modal bottom-sheet">
+		<div class="modal-content">
+			<div class="container">
+				<form action="/addLocation" method="POST">
+					<div class="row">
+						<div class="input-field col s4">
+							<input placeholder="lat" id="lat" name="lat" type="text" class="validate">
+							<label for="lat">Latitude</label>
+						</div>
+						<div class="input-field col s4">
+							<input placeholder="lng" id="lng" name="lng" type="text" class="validate">
+							<label for="lng">Longitude</label>
+						</div>
+						<div class="input-field col s4">
+							<input placeholder="w3w" id="w3w" name="w3w" type="text" class="validate">
+							<label for="w3w">what 3 words</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s4">
+							<input id="name" name="name" type="text" class="validate">
+							<label for="name">Name</label>
+						</div>
+						<div class="input-field col s4">
+							<input id="note" name="note" type="text" class="validate">
+							<label for="note">Note</label>
+						</div>
+					</div>
+					<div class="row">
+						<button class="btn waves-effect waves-light col s12" type="submit" name="action">Submit
+							<i class="material-icons right">send</i>
+						</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	 </div>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+	integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+	crossorigin=""></script> 
 	<script src="js/script.js"></script>
 </body>
 

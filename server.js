@@ -3,7 +3,7 @@ var app = express();
 var mongoose = require('mongoose');
 
 var port = 3000;
-var dbURL = //ADD DB URL HERE;
+var dbURL = 'mongodb://localhost:27017/maptest';
 
 app.use(express.json());
 app.use(express.urlencoded({
