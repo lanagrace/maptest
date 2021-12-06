@@ -7,9 +7,21 @@
 
 body{
     width: 100vw;
-    height: 100vw;
+    height: 200vh;
+}
+
+img{
+    margin-top: 1vh;
+}
+
+.mapBox{
+    display: inline;
+    justify-content: center;
+    width: 90vw;
+    height: 200vh;
 }
 
 #map{
+    margin: 20 20 20 20;
     height: 100%;
 }
